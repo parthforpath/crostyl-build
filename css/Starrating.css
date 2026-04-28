@@ -1,0 +1,39 @@
+.star-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: Arial, sans-serif;
+}
+
+.stars {
+  display: inline-flex;
+  align-items: center;
+}
+
+.star {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.star .star-empty {
+  color: #ccc;
+}
+
+.star .star-filled {
+  color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.review-count {
+  font-size: 14px;
+  color: #333;
+  margin-left: 4px;
+}

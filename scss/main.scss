@@ -1,0 +1,15 @@
+@use "sass:meta";
+@import "/fonts/fonts.css";
+@import "/fonts/font-icons.css";
+@import "/css/bootstrap.min.css";
+@import "/css/swiper-bundle.min.css";
+@import "/css/animate.css";
+@include meta.load-css("app.scss");
+@include meta.load-css("rtl.scss");
+@include meta.load-css("custom.scss");
+/* Add to your CSS file */
+@import url('https://fonts.cdnfonts.com/css/impact');
+@import url('https://fonts.cdnfonts.com/css/agency-fb');
+@import url('https://fonts.cdnfonts.com/css/eurostile');
+// @import "photoswipe/dist/photoswipe.css";
+// @import "rc-slider/assets/index.css";

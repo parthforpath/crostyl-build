@@ -1,0 +1,390 @@
+/* ============================================
+   WRITE REVIEW MODAL - BACKDROP
+   ============================================ */
+.write-review-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ============================================
+   WRITE REVIEW MODAL - CONTAINER
+   ============================================ */
+.write-review-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideDown 0.3s ease-in-out;
+}
+
+/* Modal Content Container */
+.write-review-container {
+  margin: 0;
+  padding: 30px;
+  border: none;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: #999;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* ============================================
+   FORM TITLE & LABELS
+   ============================================ */
+.review-form-title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 28px;
+  color: #222;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+/* ============================================
+   STAR RATING INPUT
+   ============================================ */
+.star-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  color: #ccc;
+  font-size: 28px;
+}
+
+.star-input .star {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-block;
+  line-height: 1;
+}
+
+.star-input .star:hover {
+  transform: scale(1.15);
+  color: #ffb800;
+}
+
+.star-input .star.active {
+  color: #ffc107;
+  text-shadow: 0 0 3px rgba(255, 193, 7, 0.3);
+}
+
+/* ============================================
+   FORM INPUTS
+   ============================================ */
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #222;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.5;
+}
+
+/* Character Count */
+.char-count {
+  display: block;
+  font-size: 12px;
+  color: #999;
+  margin-top: 4px;
+  text-align: right;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.review-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.submit-btn,
+.cancel-btn {
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex: 1;
+  min-width: 140px;
+}
+
+.submit-btn {
+  background: #222;
+  color: #fff;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cancel-btn {
+  background: #e5e5e5;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.cancel-btn:hover:not(:disabled) {
+  background: #d9d9d9;
+}
+
+.cancel-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ============================================
+   ERROR MESSAGE
+   ============================================ */
+.error-text {
+  color: #d32f2f;
+  font-size: 13px;
+  margin: 16px 0;
+  text-align: center;
+  padding: 12px;
+  background-color: #ffebee;
+  border-radius: 4px;
+  border-left: 3px solid #d32f2f;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* ============================================
+   MOBILE RESPONSIVE STYLES
+   ============================================ */
+@media (max-width: 768px) {
+  .write-review-modal {
+    width: 95%;
+    max-width: 100%;
+    max-height: 95vh;
+  }
+
+  .write-review-container {
+    padding: 24px 20px;
+    border-radius: 12px;
+  }
+
+  .review-form-title {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .form-label {
+    font-size: 13px;
+  }
+
+  .star-input {
+    font-size: 24px;
+    gap: 10px;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 11px 12px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .form-textarea {
+    min-height: 100px;
+  }
+
+  .review-buttons {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .submit-btn,
+  .cancel-btn {
+    padding: 14px 20px;
+    font-size: 13px;
+    min-width: 100%;
+    flex: none;
+  }
+
+  .close-btn {
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    font-size: 28px;
+  }
+
+  .form-group {
+    margin-bottom: 18px;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .write-review-container {
+    padding: 20px 16px;
+  }
+
+  .review-form-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .form-label {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .star-input {
+    font-size: 22px;
+    gap: 8px;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 10px 10px;
+    font-size: 16px;
+  }
+
+  .form-textarea {
+    min-height: 90px;
+  }
+
+  .submit-btn,
+  .cancel-btn {
+    padding: 12px 16px;
+    font-size: 12px;
+  }
+
+  .char-count {
+    font-size: 11px;
+  }
+
+  .error-text {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+
+  .close-btn {
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    font-size: 24px;
+  }
+}
+
+/* Tablet Landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .write-review-modal {
+    max-width: 500px;
+  }
+
+  .write-review-container {
+    padding: 28px;
+  }
+}
